@@ -15,62 +15,8 @@
         <script src="https://use.fontawesome.com/031e3862f6.js"></script>
 
         <style>
-            #main_container{
-                width:45vw;
-                margin: auto;
-                padding-top: 50px;
-                text-align: center;
-            }
-
-            #main_container h1{
-
-                color:#063251;
-                letter-spacing: 3px;
-                font-family: 'Roboto', sans-serif;
-            }
-
-            #main_container{
-                padding: 10px;
-                color:#063251;
-                font-family: 'Roboto', sans-serif;
-                letter-spacing: 3px;
-
-            }
-            #no{
-                border-radius: 5px;
-                padding: 10px;
-            }
-            #generate{
-                border-radius: 5px;
-                margin: 5px;
-                background-color: #49A6E9;
-                color:#063251;
-                padding: 10px;
-                border:none ;
-                cursor: pointer;
-
-
-            }
-            #content{
-                padding-top: 20px;
-                color:#6D87A0;
-                position: relative;
-                text-align:center;
-                font-family: 'Roboto', sans-serif;
-            }
-            #content div{
-                padding: 20px;
-                
-            }
-            body{
-                background-color: #F1F5F8;
-            }
-            .active{
-            display: block;    
-            }
-            .inactive{
-                display: none;    
-            }
+           
+            
         </style>
         
     
@@ -142,90 +88,7 @@
        
 
 
-        <script>
-            window.onload = function(){
-              
-
-                document.getElementById("generate").onclick = function(){
-                    
-                    let changed_number =  document.getElementById("no").value;
-
-                        console.log("add")
-                        console.log()
-                    let content = document.getElementById("content").children;
-
-                    if(parseInt(changed_number) > 1 && parseInt(changed_number) < 10   ){
-                        console.log(changed_number)
-
-                       
-                    
-                   for(var i =1 ; i <= parseInt(changed_number) ; i++){
-                    console.log(i+"Iam i")
-                    document.getElementById(i.toString()).style.position ="relative"
-                    document.getElementById(i.toString()).classList.remove("inactive");
-                    document.getElementById(i.toString()).classList.add("active");
-
-
-                    }
-
-                     
-                   for(var i =parseInt(changed_number)+1 ; i < 9 ; i++){
-
-                        document.getElementById(i).classList.add("inactive");
-                        document.getElementById(i).classList.remove("active");
-
-
-                        }
-                   
-                }else if(parseInt(changed_number) == 0){
-
-                    for(var i =1 ; i <= 9 ; i++){
-                   
-                   document.getElementById(i.toString()).classList.add("inactive");
-                   document.getElementById(i.toString()).classList.remove("active");
-                  
-
-
-                   }
-
-
-                }
-                else{
-
-                    console.log("Iam else")
-
-                    for(var i =1 ; i <= 9 ; i++){
-                   
-                    document.getElementById(i.toString()).classList.add("inactive");
-                    document.getElementById(i.toString()).classList.remove("active");
-                    document.getElementById(i.toString()).style.position ="absolute"
-                    document.getElementById(i.toString()).style.top ="5px"
-
-
-                    }
-
-                    let random = Math.floor(Math.random()*8)+1;
-
-                    console.log(random+"Iam random")
-
-                    document.getElementById(random.toString()).classList.remove("inactive");
-                    document.getElementById(random.toString()).classList.add("active");
-
-
-
-                }
-
-                }
-
-
-            }
-
-            
-          
-
-
-
-        </script>
+        
         
    
     </body>
